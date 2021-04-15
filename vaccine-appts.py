@@ -60,6 +60,7 @@ def is_appt_avail(avail_df):
 def notification_email(avail_df, current_coords, distance_miles=None, filters=None):
     def format_appt(x):
         time_df = pd.DataFrame(avail_df.appointments.iloc[0])
+        print("CITIES: ", avail_df.city)
         time_df['time'] = pd.to_datetime(time_df['time'])
         time_df['time_formatted'] = time_df['time'].dt.strftime('%B %d, %Y, %I:%M %p')
         time_df['appt_formatted'] = time_df.agg(

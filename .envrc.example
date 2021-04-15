@@ -1,0 +1,10 @@
+layout poetry
+
+export STATE="CA" # 2-letter abbreviation of the state you are in
+export LATITUDE=
+export LONGITUDE=
+export DISTANCE_MILES="100" # How far away you want to find appointments (in miles)
+export EMAIL= # Email address to send notifications to
+export INTERVAL_MINUTES="10"  # How often (in minutes) to check appointments
+export PREFECT__CONTEXT__SECRETS__EMAIL_PASSWORD="Gmail app password" # see below
+export PREFECT__CONTEXT__SECRETS__EMAIL_USERNAME="Gmail username" # see below
